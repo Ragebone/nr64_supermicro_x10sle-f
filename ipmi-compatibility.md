@@ -1,7 +1,7 @@
 Successful boot
 
 | IPMI Version  | BIOS Version | Boot |
-| ---| --- | --- |
+| :---: | :---: | :---: |
 | 02.26 | 3.2a | No |
 | 03.30 | 3.2a | Yes |
 | 03.35 | 3.2a | Yes |
