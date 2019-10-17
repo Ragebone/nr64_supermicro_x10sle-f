@@ -7,7 +7,7 @@ Successful trun on server from Ipmi interface
 | 03.35 | 3.2a | Yes |
 | 03.36 | 3.2a | Yes |
 | 03.37 | 3.2a | Yes |
-| 03.38 | 3.2a | Yes |
+| 03.38 | 3.2a | No (Braking change happens here) |
 | 03.40 | 3.2a | No |
 | 03.50 | 3.2a | No |
 | 03.60 | 3.2a | No |
