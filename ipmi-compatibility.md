@@ -1,4 +1,4 @@
-Successful trun on server from Ipmi interface
+Successful turn on server from Ipmi interface
 
 | IPMI Version  | BIOS Version | Boot |
 | :---: | :---: | :---: |
