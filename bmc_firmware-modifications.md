@@ -3,8 +3,8 @@
 
 How to modify the BMC-firmware to have an alternative way to gain factory settings again. 
 
-Note: Use this variant only, if anything else (booting a linux on that supermicro board) was unsuccessful. 
-**This is a dangerous approach, as it could ends with a non functional mainboard! Be aware of that!**
+Note Use this variant only, if anything else (booting a linux on that supermicro board) was unsuccessful. 
+**WARNING: This is a dangerous approach, as it could ends with a non functional mainboard! Be aware of that!**
 
 1. Create a backup of your bmc firmware. If you have several boards, do this on each individual board, as the BMC firmware includes the MAC address of the IPMI interface! 
 Let's assume it is called "backup.bin" 
@@ -63,43 +63,38 @@ The checksums are same. Perfect!
 4. Mounting the JFFS2 volume
 
 ```
-daniel@danielpc:~/rebuild_oldimage$ sudo modprobe loop
-daniel@danielpc:~/rebuild_oldimage$ sudo modprobe mtdblock
-daniel@danielpc:~/rebuild_oldimage$ sudo losetup /dev/loop0 ./0x100000.jffs 
-daniel@danielpc:~/rebuild_oldimage$ sudo modprobe block2mtd block2mtd=/dev/loop0,128ki
-daniel@danielpc:~/rebuild_oldimage$ sudo mount -tjffs2 /dev/mtdblock0 /mnt
+~/$ sudo modprobe loop
+~/$ sudo modprobe mtdblock
+~/$ sudo losetup /dev/loop0 ./0x100000.jffs 
+~/$ sudo modprobe block2mtd block2mtd=/dev/loop0,128ki
+~/$ sudo mount -tjffs2 /dev/mtdblock0 /mnt
 ```
 5. Removing the PSBlock to do a factory reset  
 ```
-daniel@danielpc:~/rebuild_oldimage$ sudo rm /mnt/PSBlock 
+~/$ sudo rm /mnt/PSBlock 
 ```
 6. Umount and unload all required linux modules 
 ```
-daniel@danielpc:~/rebuild_oldimage$ sudo umount /mnt
-daniel@danielpc:~/rebuild_oldimage$ sudo rmmod block2mtd
-daniel@danielpc:~/rebuild_oldimage$ sudo rmmod mtdblock
-daniel@danielpc:~/rebuild_oldimage$ sudo losetup -d /dev/loop0 
+~/$ sudo umount /mnt
+~/$ sudo rmmod block2mtd
+~/$ sudo rmmod mtdblock
+~/$ sudo losetup -d /dev/loop0 
 ```
 
 7. Merge the patched JFFS2 file into the firmware image
 ```
-daniel@danielpc:~/rebuild_oldimage$ cat ./start.bin ./0x100000.jffs ./end.bin >patched_image.bin 
+~/$ cat ./start.bin ./0x100000.jffs ./end.bin >patched_image.bin 
 ~/$ md5sum backup.bin test_image.bin patched_image.bin 
 943585ff7de899e48aa627af579709bd  backup.bin
 943585ff7de899e48aa627af579709bd  test_merge.bin
 5fac4e900671cef5caae641b94a79066  patched_image.bin
 ```
-As you can see the patched image differ between the original and the first test-merge. Ensure that the filesize is still the same.
+As you can see the patched image differ between the original and the first test-merge.
+Ensure that the filesize is still the same.
 
 8. Flash the modified BMC firmware
-After you flashed the modified BMC firmware on the board, the IPMI interface uses a dynamic IP address via DHPC and your login/password is: ADMIN/ADMIN. 
+Flash your modified BMC firmware to the board and power it up again. 
+The IPMI interface will get a dynamic ip address via DHCP and your login/password is: ADMIN/ADMIN. 
 
 Good luck!
-
-
-
-
-
-
-
 
