@@ -47,6 +47,83 @@ To ensure that you are able to wire the pins in the right order, you should have
 You can use whatever you have a hand: A notebook, desktop or embedded board like a raspberry pi, which is running linux. You *could* get away with a virtual machine, but I do not recommend it, as you have to communicate over USB and the timing needs to be exact. 
 In this example I will use a linux machine running with Ubuntu 18.04. It is not very important to have exactly this version, since all tools I am using are pretty common in every linux distribution. 
 
+## Physical connection to the firmware 
+
+**WARNING! The SPI Programmer are set to power the Flash ICs themselfes. You have to pull off every other power supply to the Supermicro board! Otherwise you can harm your Supermicro Board, SPI Flasher and even your Computer which is connected via USB! You have been warned!**
+
+### BMC flash pinout
+
+[!BMC MX25L256 pinout](bmc-flashchip-pinout.png)
+
+[!Flasher to BMC Chip Cabling](bmc-cabling.jpg)
+
+### BIOS flash pinout 
+
+[!BIOS W25Q128.V pinout](bios-flashchip-pinout.jpg)
+
+[!Flasher to BIOS Chip Cabling](bios-cabling.jpg)
+
+
+## Software Installation 
+
+### Getting the newest flashrom version
+
+There could be problems with old flashrom versions in linux distributions. That's why it is mandatory to get the latest source code of flashrom and build it. 
+
+First ensure that you have no "flashrom" installed
+
+```
+user@mycomputer:~$ which flashrom 
+user@mycomputer:~$
+```
+If you see a directory path which points to an existing flashrom binary, then please remove it first. 
+
+Getting the new flashrom version:
+
+This is a straight forward. If you are using Ubuntu Linux, it should work exactly as explained. On Debian or Redhat based distributions some libraries you be named differently. 
+
+Ensuring that the apt sources are up to date. 
+```
+user@mycomputer:~$ sudo apt update
+```
+
+Installation everything to be able to compile C code and installing all required libraries and include files to work with usb programmers.
+```
+user@mycomputer:~$ sudo apt install git build-essential libpci-dev pciutils pciutils libpci-dev zlib1g-dev libusb-dev libusb-1.0.0-dev
+```
+
+Checking out flashrom, compiling it and installing it to /usr/local/sbin.
+```
+user@mycomputer:~$ git clone https://github.com/flashrom/flashrom.git
+user@mycomputer:~$ cd flashrom 
+user@mycomputer:~$ make 
+```
+
+When the compilation worked fine, continue with installing it to /usr/local/sbin 
+```
+user@mycomputer:~$ sudo make install
+```
+
+Let's see if flashrom is available now 
+
+```
+user@mycomputer:~$ which flashrom 
+/usr/local/sbin/flashrom
+user@mycomputer:~$
+```
+If it doesn't work, you may try it a root user, as the path is strictly for root/admin users. 
+
+
+## Backup and Restore of the BMC Firmware 
+
+
+
+
+
+# Backup and Restore of the BIOS Firmware 
+
+
+
 
 
 
