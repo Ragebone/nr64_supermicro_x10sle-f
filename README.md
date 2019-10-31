@@ -20,10 +20,15 @@ However a few homelab'ers on the [ServeTheHome Forum](https://forums.servethehom
 ## Additional Documentation 
 
 [Power-Supply Pinouts](power-supply.md)
+
 [CPU Cooler-Overview](cpu_cooling_options.md)
+
 [IPMI Compatiblity Matrix when used without Chassis](ipmi-compatibility.md)
+
 [Howto Backup and Restore BIOS and BMC Firmware with SPI Flash Programmer](firmware_flashing.md)
+
 [BMC-Firmware Modifications, to reset unkown ADMIN Logins](bmc_firmware-modifications.md)
+
 
 
 
