@@ -44,6 +44,8 @@ This looks very similar to the typcial Supermicro socket 2011 narrow ILM! Thats 
 | 2U | [CooNong Narrow ILM](https://www.aliexpress.com/item/33006186833.html) (Manufactor not found) | Active CPU cooling Solution with direct attached heat pipes for LGA 2011 narrow ILM with 60mm fan on the side | Connected 12V via 4 pin PWM, aprox. 41 dbA | 
 | 2U | [CooNong Narrow ILM](https://www.aliexpress.com/item/32983245396.html) (Manufactor not found) | Active CPU cooling Solution with full copper heat sink and 60mm top fan for LGA 2011 narrow ILM | Connected 12V via 4 pin PWM, aprox. 41 dbA | 
 | 1U | [CooNong Heat Sink](https://www.aliexpress.com/item/32983980455.html) (Manufactor not found) | Fully Copper heat sink based on LGA 2011 narrow ILM | Needs horizontal airflow (small screw side to small screw side) or from above | 
+| 1U | [Fujitsu V26898-B1000-V1](http://manuals.ts.fujitsu.com/illustrated_spares/content/RX2510_M1/detail.htm?id=546) | LGA 2011 narrow ILM heat sink with a covered top | Needs horizontal airflow (small screw side to small screw side)  | 
+| 4U | [Fujitsu V26898-B1005-V1](http://manuals.ts.fujitsu.com/files/html/primergy/isc/RX2560_M1/detail.htm?id=561) | LGA 2011 narrow ILM Heatpipe tower style heat sink (made by Coolermaster) | Needs horizontal airflow (small screw side to small screw side) | 
 
 ## Accessories
 
@@ -51,4 +53,5 @@ Upgradekit for [Thermalright coolers](http://www.thermalright.de/en/cooler/) (*)
 (*) Compatbility-exceptions are the "Heatpipe-Direct Models": Macho Direct, True Spirit 140 Direct, True Spirit Direct
 
 Conversion Bracket for [Supermicro SNK-P0050AP4](https://store.supermicro.com/4u-active-cpu-cooler-snk-p0050ap4.html) to 2011 Narrow ILM:  BKT-0050L-RN  - could be helpful to convert a Square-ILM 2011-CPU Cooler to Narrow-ILM. Brackets are available on the used market. 
+
 
