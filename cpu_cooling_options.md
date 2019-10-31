@@ -24,8 +24,15 @@ This looks very similar to the typcial Supermicro socket 2011 narrow ILM! Thats 
 | 2U | [SNK-P0048PS](https://store.supermicro.com/2u-passive-cpu-cooler-snk-p0048ps.html) | Heat Sink with covered top. | Needs horizontal Airflow (small screw side to small screw side) |
 | 2U | [SNK-P0058PSU](https://store.supermicro.com/server-accessories/heatsink/2u-passive-cpu-cooler-snk-p0058psu.html) | Special stair stile heat hink would allow an offset or angled fan. | Made for horizontal Airflow (small screw side to small screw side) |
 | 4U | [SNK-P0050AP4](https://store.supermicro.com/4u-active-cpu-cooler-snk-p0050ap4.html) | Active CPU cooling solution with adapter to fit square and narrow ILM | Connected 12V via 4 pin PWM with aprox 38 dbA |
-
-
+| 1U | [Dynatron T318](https://www.dynatron.co/product-page/t318) | Fully Copper based on LGA 2011 narrow ILM | Needs horizontal airflow (small screw side to small screw side) or from above |
+| 1U | [Dynatron T249](https://www.dynatron.co/product-page/t249) | Fully Copper based on LGA 2011 narrow ILM slightly more effective than T318 | Needs horizontal airflow (small screw side to small screw side) or from above |
+| 1U | [Dynatron R31](https://www.dynatron.co/product-page/r31) | Aluminium cooler with copper base plate based on LGA 2011 narrow ILM | Needs horizontal airflow (small screw side to small screw side) or from above |
+| 2U | [Dynatron R23](https://www.dynatron.co/product-page/r31) | Aluminium cooler with copper base plate based on LGA 2011 narrow ILM | Needs horizontal airflow (small screw side to small screw side) or from above |
+| 2U | [Dynatron R14](https://www.dynatron.co/product-page/r14) | Active CPU cooling solution with fully copper heat sink for LGA 2011 narrow ILM | Connected 12V via 4 pin PWM with aprox 16 to 47 dbA (based on PWM signal) |
+| 2U | [Dynatron R24](https://www.dynatron.co/product-page/r24) | Active CPU cooling solution with direct attached heat pipes for LGA 2011 narrow ILM | Connected 12V via 4 pin PWM with aprox 16 to 47 dbA (based on PWM signal) |
+| 3U | [Dynatron R27](https://www.dynatron.co/product-page/r14) | Active CPU cooling solution with direct attached heat pipes LGA 2011 narrow ILM with an 80mm fan | Connected 12V via 4 pin PWM with aprox 16 to 44 dbA (based on PWM signal) |
+| 1U | [Dynatron R13](https://www.dynatron.co/product-page/r13) | Active CPU cooling solution with a blower fan for LGA 2011 narrow ILM | Connected 12V via 4 pin PWM with aprox 22 to 59 dbA (based on PWM signal) |
+| 1U | [Dynatron R25](https://www.dynatron.co/product-page/r25) | Active CPU cooling solution with a blower fan for LGA 2011 narrow ILM | Connected 12V via 4 pin PWM with aprox 22 to 59 dbA (based on PWM signal) |
 
 
 
