@@ -31,12 +31,16 @@ Please have a look at the red line of the ribbon cable. The is always pointing t
 When I tried my first backups of the BMC firmware of the x10sle-f, I was constantly having issues to detect the flash chip. I figured out that the pins are either covered in a sealing or are just isolated by the years of use. 
 That's why it is very helpful to get a contact cleaning pen with a fiber tip. The german translation is "Glasfaser Radierstift". 
 
-They look like the following: 
+They look like the following:
+
+
 ![cleaning pen with fiber inert](cleaning-pen.jpg)
+
 
 ![cleaning pen on ic pins](cleaning-pen-on-chip.jpg)
 
 It is extremly helpful and I had no connectivity issues anymore. 
+
 
 ### Female dupont jumper wires
 
