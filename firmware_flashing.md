@@ -53,15 +53,28 @@ In this example I will use a linux machine running with Ubuntu 18.04. It is not 
 
 ### BMC flash pinout
 
-[!BMC MX25L256 pinout](bmc-flashchip-pinout.png)
+![BMC MX25L256 pinout](bmc-flashchip-pinout.png)
 
-[!Flasher to BMC Chip Cabling](bmc-cabling.jpg)
+![Flasher to BMC Chip Cabling](bmc-cabling.jpg)
+
+Please ensure that the pins of the BMC flash chip is cleaned up with the cleaning pen to ensure good connectivity. Before plugging in the programmer into your USB board, make a check if GND on your programmer has a connection to the GND of the Supermicro Board. A good position is the Powersupply-Connector (which you have unplugged!) on the mainboard. 
+
+Ensure that the "P/S" Jumper is set on your SPI Programmer. This one ensures that the programmer is able to power the flash chip.
+
+If that works, you can give it a try and make a backup (see below) 
+
 
 ### BIOS flash pinout 
 
-[!BIOS W25Q128.V pinout](bios-flashchip-pinout.jpg)
+![BIOS W25Q128.V pinout](bios-flashchip-pinout.jpg)
 
-[!Flasher to BIOS Chip Cabling](bios-cabling.jpg)
+![Flasher to BIOS Chip Cabling](bios-cabling.jpg)
+
+Please ensure that the pins of the BIOS flash chip is cleaned up with the cleaning pen to ensure good connectivity. Before plugging in the programmer into your USB board, make a check if GND on your programmer has a connection to the GND of the Supermicro Board. A good position is the Powersupply-Connector (which you have unplugged!) on the mainboard. 
+
+Ensure that the "P/S" Jumper is set on your SPI Programmer. This one ensures that the programmer is able to power the flash chip.
+
+If that works, you can give it a try and make a backup (see below) 
 
 
 ## Software Installation 
@@ -116,13 +129,69 @@ If it doesn't work, you may try it a root user, as the path is strictly for root
 
 ## Backup and Restore of the BMC Firmware 
 
+If everything is connected as shown, try your luck with a backup of the BMC Firmware: 
+
+```
+user@mycomputer:~$ /usr/local/sbin/flashrom -p ch341a_spi -c MX25L25635F -r bmc_backup1.bin
+```
+If the chip is not detected, remove , try to unplug the programmer from usb, realign the grabber/clamp to ensure good fit and then plug in the programmer into USB again. 
+
+You can also try to remove the ```-c MX25L25635F``` part to see if programmer detected a difference flash chip. 
+You may be add ```-VV``` to the command above to have more verbose output. 
+
+If you finally backed up the BMC firmware, redo the same with "bmc_backup2.bin" 
+```
+user@mycomputer:~$ /usr/local/sbin/flashrom -p ch341a_spi -c MX25L25635F -r bmc_backup2.bin
+```
+
+Then double check if both files are the same: 
+```
+user@mycomputer:~$ md5sum bmc_backup1.bin bmc_backup2.bin 
+```
+The checksum has to be the same, so that you can be sure that the transfer worked flawlessly. 
+
+### Restoring
+
+Restoring a already backed up file is very similar, but before you write something to the flash, I recommend to do a "test-backup" first. When the test backup worked fine, you can be sure that the connection works fine. 
+
+The difference is "-w" which tells flashrom to **write** bmc_backup1.bin to the flash chip
+```
+user@mycomputer:~$ /usr/local/sbin/flashrom -p ch341a_spi -c MX25L25635F -w bmc_backup1.bin
+```
 
 
+## Backup and Restore of the BIOS Firmware 
 
+If everything is connected as shown above, try your luck with a backup of the BIOS Firmware: 
 
-# Backup and Restore of the BIOS Firmware 
+The part of "-r bios_backup1.bin" means that flashrom will **read** from the flash-chip and writes that the bios_backup1.bin file. 
+```
+user@mycomputer:~$ /usr/local/sbin/flashrom -p ch341a_spi -c W25Q128.V -r bios_backup1.bin
+```
+If the chip is not detected, remove , try to unplug the programmer from usb, realign the grabber/clamp to ensure good fit and then plug in the programmer into USB again. 
 
+You can also try to remove the ```-c W25Q128.V``` part to see if programmer detected a difference flash chip. 
+You may be add ```-VV``` to the command above to have more verbose output. 
 
+If you finally backed up the BMC firmware, redo the same with "bmc_backup2.bin" 
+```
+user@mycomputer:~$ /usr/local/sbin/flashrom -p ch341a_spi -c W25Q128.V -r bios_backup2.bin
+```
+
+Then double check if both files are the same: 
+```
+user@mycomputer:~$ md5sum bios_backup1.bin bios_backup2.bin 
+```
+The checksum has to be the same, so that you can be sure that the transfer worked flawlessly. 
+
+### Restoring
+
+Restoring a already backed up file is very similar, but before you write something to the flash, I recommend to do a "test-backup" first. When the test backup worked fine, you can be sure that the connection works fine. 
+
+The difference is "-w" which tells flashrom to **write** bios_backup1.bin to the flash chip
+```
+user@mycomputer:~$ /usr/local/sbin/flashrom -p ch341a_spi -c W25Q128.V -w bios_backup1.bin
+```
 
 
 
