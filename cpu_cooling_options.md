@@ -25,6 +25,7 @@ This looks very similar to the typcial Supermicro socket 2011 narrow ILM! Thats 
 | 1U | [SNK-P0057PSU](https://store.supermicro.com/server-accessories/heatsink/1u-passive-cpu-cooler-snk-p0057psu.html) | a wider and more effect LGA 2011 narrow ILM heat sink (May be too large for the X10SLE-F!!) | Needs horizontal airflow (small screw side to small screw side) or from above | 
 | 2U | [SNK-P0048PS](https://store.supermicro.com/2u-passive-cpu-cooler-snk-p0048ps.html) | Heat Sink with covered top. | Needs horizontal Airflow (small screw side to small screw side) | 
 | 2U | [SNK-P0058PSU](https://store.supermicro.com/server-accessories/heatsink/2u-passive-cpu-cooler-snk-p0058psu.html) | Special stair stile heat hink would allow an offset or angled fan. | Made for horizontal Airflow (small screw side to small screw side) | 
+| 2U | [SNK-P0048AP4](https://store.supermicro.com/2u-active-cpu-cooler-snk-p0048ap4.html) | Active CPU cooling solution with adapter to fit square and narrow ILM | Connected 12V via 4 pin PWM with aprox 52 dbA | 
 | 4U | [SNK-P0050AP4](https://store.supermicro.com/4u-active-cpu-cooler-snk-p0050ap4.html) | Active CPU cooling solution with adapter to fit square and narrow ILM | Connected 12V via 4 pin PWM with aprox 38 dbA | 
 | 1U | [Dynatron T318](https://www.dynatron.co/product-page/t318) | Fully Copper based on LGA 2011 narrow ILM | Needs horizontal airflow (small screw side to small screw side) or from above | 
 | 1U | [Dynatron T249](https://www.dynatron.co/product-page/t249) | Fully Copper based on LGA 2011 narrow ILM slightly more effective than T318 | Needs horizontal airflow (small screw side to small screw side) or from above | 
@@ -46,6 +47,12 @@ This looks very similar to the typcial Supermicro socket 2011 narrow ILM! Thats 
 
 Upgradekit for [Thermalright coolers](http://www.thermalright.de/en/cooler/) (*) to be able to fit on 2011 Narrow ILM:  http://www.thermalright.de/en/accessories/67/narrow-ilm-kit
 (*) Compatbility-exceptions are the "Heatpipe-Direct Models": Macho Direct, True Spirit 140 Direct, True Spirit Direct
+
+Conversion Bracket for [Supermicro SNK-P0050AP4](https://store.supermicro.com/4u-active-cpu-cooler-snk-p0050ap4.html) to 2011 Narrow ILM:  BKT-0050L-RN  - could be helpful to convert a Square-ILM 2011-CPU Cooler to Narrow-ILM. Brackets are available on the used market. 
+
+
+
+
 
 
 
