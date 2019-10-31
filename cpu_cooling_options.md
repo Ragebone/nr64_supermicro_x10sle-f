@@ -33,6 +33,13 @@ This looks very similar to the typcial Supermicro socket 2011 narrow ILM! Thats 
 | 3U | [Dynatron R27](https://www.dynatron.co/product-page/r14) | Active CPU cooling solution with direct attached heat pipes LGA 2011 narrow ILM with an 80mm fan | Connected 12V via 4 pin PWM with aprox 16 to 44 dbA (based on PWM signal) |
 | 1U | [Dynatron R13](https://www.dynatron.co/product-page/r13) | Active CPU cooling solution with a blower fan for LGA 2011 narrow ILM | Connected 12V via 4 pin PWM with aprox 22 to 59 dbA (based on PWM signal) |
 | 1U | [Dynatron R25](https://www.dynatron.co/product-page/r25) | Active CPU cooling solution with a blower fan for LGA 2011 narrow ILM | Connected 12V via 4 pin PWM with aprox 22 to 59 dbA (based on PWM signal) |
+| aprox 6U | [Noctua NH-U12DX-i4](https://noctua.at/en/products/cpu-cooler-workstation-server/nh-u12dx-i4) | Active CPU cooling solution with adapter to fit square and narrow ILM and bases on a 120mm fan | Connected 12V via 4 pin PWM with aprox 18-22 dbA, 158mm height - may need more than 5U |
+| 3U | [Noctua NH-D9DX-i4](https://noctua.at/en/products/cpu-cooler-workstation-server/nh-d9dx-i4-3u) | Active CPU cooling solution with adapter to fit square and narrow ILM and bases on a 90mm fan | Connected 12V via 4 pin PWM with aprox 16-22 dbA |
+| 3U | [Noctua NH-U9DX-i4](https://noctua.at/en/products/cpu-cooler-workstation-server/nh-u9dx-i4) | Active CPU cooling solution with adapter to fit square and narrow ILM and bases on two 90mm fans | Connected 12V via 4 pin PWM with aprox 13-17 dbA |
+
+
+
+
 
 
 
