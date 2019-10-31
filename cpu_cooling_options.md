@@ -5,6 +5,8 @@ as well as the
 It makes totally sense for Supermicro to recommend only one heat sink, since it needs to fit exactly the small blade, when used in a micro cloud chassis. 
 However, since we are trying to use it as a single board and maybe with a custom case, we should figure out alternatives to this cooler. 
 
+![original snk-p0047psr heatsink on board](snk-p0047psr-with-board.jpg)
+
 ## Dimensions of the physical connection to the Board
 
 Screw Distances:
@@ -49,17 +51,4 @@ Upgradekit for [Thermalright coolers](http://www.thermalright.de/en/cooler/) (*)
 (*) Compatbility-exceptions are the "Heatpipe-Direct Models": Macho Direct, True Spirit 140 Direct, True Spirit Direct
 
 Conversion Bracket for [Supermicro SNK-P0050AP4](https://store.supermicro.com/4u-active-cpu-cooler-snk-p0050ap4.html) to 2011 Narrow ILM:  BKT-0050L-RN  - could be helpful to convert a Square-ILM 2011-CPU Cooler to Narrow-ILM. Brackets are available on the used market. 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
