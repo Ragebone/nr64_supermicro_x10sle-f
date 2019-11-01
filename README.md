@@ -11,7 +11,8 @@ However a few homelab'ers on the [ServeTheHome Forum](https://forums.servethehom
 
 ![X10SLE-F with original heat sink](snk-p0047psr-with-board.jpg) 
 
-* Single Socket H3 (LGA 1150) CPU which allows the usage of Xeon E3-1200 V4 and V5 series, but also Pentium and Celeron and Core i3 of the 4th Generation. 
+* Single Socket H3 (LGA 1150) chipset, which supports Haswell and Broadwell Generation cpus. 
+* Officially suported are E3-1200 V3 and V4, Celeron, Pentium and Core i3 cpus up to 80 watt TDP.  
 * Able to use up to 32GB Ram via 4 Slots (1,2,4 and 8GB Dimms), but only UDIMM ECC allowed - No Non-ECC or Reg-ECC can be used!
 * 5 SATA3 Ports 
 * AST2400 IPMI Interface (including Redfish and HTML5 Remote Console) 
