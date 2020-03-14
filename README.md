@@ -20,7 +20,7 @@ However a few homelab'ers on the [ServeTheHome Forum](https://forums.servethehom
 
 ## Additional Documentation 
 
-[Power-Supply Pinouts](power-supply.md)
+[Powering without Chassis](power-supply.md)
 
 [CPU Cooler-Overview](cpu_cooling_options.md)
 
