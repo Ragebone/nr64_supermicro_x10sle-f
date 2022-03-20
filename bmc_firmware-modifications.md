@@ -53,7 +53,7 @@ Get the md5sum (or sha256sum if you like) of the original backup:
 Then merge the 3 parts together and check again: 
 ```
 cat ./start.bin ./0x100000.jffs ./end.bin >test_merge.bin 
-~/$ md5sum backup.bin test_image.bin 
+~/$ md5sum backup.bin test_merge.bin 
 943585ff7de899e48aa627af579709bd  backup.bin
 943585ff7de899e48aa627af579709bd  test_merge.bin
 ```
@@ -84,7 +84,7 @@ The checksums are same. Perfect!
 7. Merge the patched JFFS2 file into the firmware image
 ```
 ~/$ cat ./start.bin ./0x100000.jffs ./end.bin >patched_image.bin 
-~/$ md5sum backup.bin test_image.bin patched_image.bin 
+~/$ md5sum backup.bin test_merge.bin patched_image.bin 
 943585ff7de899e48aa627af579709bd  backup.bin
 943585ff7de899e48aa627af579709bd  test_merge.bin
 5fac4e900671cef5caae641b94a79066  patched_image.bin
