@@ -4,7 +4,7 @@
 How to modify the BMC-firmware to have an alternative way to gain factory settings again. 
 
 Note Use this variant only, if anything else (booting a linux on that supermicro board) was unsuccessful. 
-**WARNING: This is a dangerous approach, as it could ends with a non functional mainboard! Be aware of that!**
+**WARNING: This is a dangerous approach, as it could end with a non functional mainboard! Be aware of that!**
 
 1. Create a backup of your bmc firmware. If you have several boards, do this on each individual board, as the BMC firmware includes the MAC address of the IPMI interface! 
 Let's assume it is called "backup.bin" 
